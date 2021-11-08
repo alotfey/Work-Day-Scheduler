@@ -1,6 +1,3 @@
-
-
-
 // show time now
 var currentDayEl = document.getElementById("currentDay");
 currentDayEl.textContent = moment().format('dddd, MMMM Do');
@@ -17,7 +14,7 @@ var currentHour = cal.getHours(); // returns 0-23 on a 24 hour clock
             document.getElementById(i.toString()).classList.add('future');
         }
     }
-
+// save to local storage
     document.querySelectorAll('.saveBtn').forEach(item => {
     item.addEventListener('click', event => {
 
@@ -42,7 +39,7 @@ var currentHour = cal.getHours(); // returns 0-23 on a 24 hour clock
 })
 });
 
-     // Display saved tasks
+     // Display saved storage
      var saved1 = localStorage.getItem('text1');
      document.getElementById('9').value = saved1;
      var saved2 = localStorage.getItem('text2');
